@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class menuAnimationController : MonoBehaviour
 {
-    public enum state { enterLeft, enterRight, exitLeft, exitRight };
+    public enum state { enterLeft, enterRight, exitLeft, exitRight, idle };
     public state menuState;
     Animator anim;
 
@@ -24,6 +24,7 @@ public class menuAnimationController : MonoBehaviour
                 anim.SetBool("enterRight", false);
                 anim.SetBool("exitLeft", false);
                 anim.SetBool("exitRight", false);
+                anim.SetBool("idle", false);
                 break;
 
             case state.enterRight:
@@ -31,6 +32,7 @@ public class menuAnimationController : MonoBehaviour
                 anim.SetBool("enterRight", true);
                 anim.SetBool("exitLeft", false);
                 anim.SetBool("exitRight", false);
+                anim.SetBool("idle", false);
                 break;
 
             case state.exitLeft:
@@ -38,6 +40,7 @@ public class menuAnimationController : MonoBehaviour
                 anim.SetBool("enterRight", false);
                 anim.SetBool("exitLeft", true);
                 anim.SetBool("exitRight", false);
+                anim.SetBool("idle", false);
                 break;
 
             case state.exitRight:
@@ -45,6 +48,15 @@ public class menuAnimationController : MonoBehaviour
                 anim.SetBool("enterRight", false);
                 anim.SetBool("exitLeft", false);
                 anim.SetBool("exitRight", true);
+                anim.SetBool("idle", false);
+                break;
+
+            case state.idle:
+                anim.SetBool("enterLeft", false);
+                anim.SetBool("enterRight", false);
+                anim.SetBool("exitLeft", false);
+                anim.SetBool("exitRight", false);
+                anim.SetBool("idle", true);
                 break;
         }
     }
