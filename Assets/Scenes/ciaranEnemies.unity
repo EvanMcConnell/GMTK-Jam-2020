@@ -640,6 +640,11 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 4395bc6568bdcbe4a8e89bdf8ca195bd, type: 2}
+    - target: {fileID: 2856752257740206326, guid: 83662505f58c5c149b3aa3d7b34f53ea,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2856752257740206327, guid: 83662505f58c5c149b3aa3d7b34f53ea,
         type: 3}
       propertyPath: m_Name

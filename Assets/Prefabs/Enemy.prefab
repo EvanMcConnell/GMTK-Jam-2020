@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2856752257740206313}
   - component: {fileID: 2856752257740206326}
   - component: {fileID: 728679124086575425}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: ballEnemy
   m_Icon: {fileID: 0}
@@ -112,11 +112,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 5
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4395bc6568bdcbe4a8e89bdf8ca195bd, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -136,4 +136,4 @@ MonoBehaviour:
   myPrefab: {fileID: 2856752257740206327}
   player: {fileID: 0}
   maxEnemies: 200
-  thrust: 99999
+  thrust: 299999

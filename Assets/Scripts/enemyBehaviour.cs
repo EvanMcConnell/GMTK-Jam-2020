@@ -35,7 +35,7 @@ public class enemyBehaviour : MonoBehaviour
 
     void spawn()
     {
-        rb.AddForce((player.transform.position - transform.position).normalized * thrust * Time.smoothDeltaTime);
+        rb.AddForce((player.transform.position - transform.position + new Vector3(0, 1, 0)).normalized * thrust * Time.smoothDeltaTime);
         print("enemyAmount: " + EnemyAmount);
         print("maxEnemies: " + maxEnemies);
 
