@@ -7,15 +7,31 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    int bulletsLeft = 5, levelNumber;
+    int bulletsLeft = 5, levelNumber, score;
     [SerializeField]
     Text bulletUI;
+    static GameManager gameManager;
 
-    private void Start()
+    private void Awake()
     {
-        if(levelNumber > 0)
+        if(gameManager)
         {
-            bulletUI.text = bulletsLeft.ToString();
+            gameManager.bulletUI = bulletUI;
+            if (levelNumber > 0)
+            {
+                bulletUI.text = bulletsLeft.ToString();
+            }
+            Destroy(this);
+        }
+        else
+        {
+            score = 0;
+            if (levelNumber > 0)
+            {
+                bulletUI.text = bulletsLeft.ToString();
+            }
+            gameManager = this;
+            DontDestroyOnLoad(this);
         }
     }
 
@@ -34,6 +50,11 @@ public class GameManager : MonoBehaviour
             return true;
         }
         else return false;
+    }
+
+    public void addScore()
+    {
+        score++;
     }
 
 }
