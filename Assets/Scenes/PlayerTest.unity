@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5949892266462470582, guid: b8017e579afb3e44eb31f15ee9826209, type: 3}
-  gunPivot: {fileID: 712755539}
+  bulletPivot: {fileID: 0}
   bulletSpeed: 1
 --- !u!1 &752400869
 GameObject:
@@ -1176,7 +1176,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.91764706, g: 0.9137255, b: 0.5568628, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -5408,7 +5408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5949892266462470582, guid: b8017e579afb3e44eb31f15ee9826209, type: 3}
-  gunPivot: {fileID: 1764790563}
+  bulletPivot: {fileID: 0}
   bulletSpeed: 1
 --- !u!1001 &7810687590979385024
 PrefabInstance:
