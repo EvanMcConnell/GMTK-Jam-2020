@@ -14,8 +14,6 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(Vector3.Distance(mousePos, transform.position));
-
         rotateWeapon();
         checkForFire();
     }

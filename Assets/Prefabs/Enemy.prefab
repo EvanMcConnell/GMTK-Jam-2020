@@ -135,5 +135,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myPrefab: {fileID: 2856752257740206327}
   player: {fileID: 0}
-  maxEnemies: 200
+  maxEnemies: 256
   thrust: 299999

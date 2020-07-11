@@ -15,7 +15,7 @@ public class enemyBehaviour : MonoBehaviour
     Renderer renderer;
     void Start()
     {
-        player = GameObject.FindWithTag("player");
+        player = GameObject.FindWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         renderer = gameObject.GetComponent<Renderer>();
 
