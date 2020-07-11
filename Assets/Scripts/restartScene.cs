@@ -23,7 +23,6 @@ public class restartScene : MonoBehaviour
 
         if (EnemyAmount >= 512)
         {
-            print("its a go");
             StartCoroutine(resetShow());
         }
 

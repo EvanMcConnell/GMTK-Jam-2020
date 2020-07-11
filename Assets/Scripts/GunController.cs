@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
-
+    GameManager gameManager;
     [SerializeField]
     GameObject bullet, bulletPivot;
     [SerializeField]
@@ -12,6 +12,12 @@ public class GunController : MonoBehaviour
     Vector3 mousePos;
 
     // Update is called once per frame
+
+    private void Start()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
+
     void Update()
     {
         rotateWeapon();
@@ -39,22 +45,30 @@ public class GunController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (Vector3.Distance(mousePos,transform.position) > 1)
+            if (bullet != null)
             {
-                GameObject projectile = Instantiate(bullet, bulletPivot.transform.position, Quaternion.identity);
-                projectile.GetComponent<Bullet>().setSpeed(bulletSpeed);
-                projectile.transform.LookAt(mousePos);
-                if (transform.position.x > mousePos.x)
+                if (Vector3.Distance(mousePos, transform.position) > 1)
                 {
-                    projectile.transform.rotation = Quaternion.Euler(0, 0, projectile.transform.rotation.eulerAngles.x + 180);
-                }
-                else
-                {
-                    projectile.transform.rotation = Quaternion.Euler(0, 180, projectile.transform.rotation.eulerAngles.x + 180);
+                    if (gameManager.canShoot())
+                    {
+                        GameObject projectile = Instantiate(bullet, bulletPivot.transform.position, Quaternion.identity);
+                        if (projectile.tag == "Bullet")
+                        {
+                            projectile.GetComponent<Bullet>().setSpeed(bulletSpeed);
+                        }
+                        projectile.transform.LookAt(mousePos);
+                        if (transform.position.x > mousePos.x)
+                        {
+                            projectile.transform.rotation = Quaternion.Euler(0, 0, projectile.transform.rotation.eulerAngles.x + 180);
+                        }
+                        else
+                        {
+                            projectile.transform.rotation = Quaternion.Euler(0, 180, projectile.transform.rotation.eulerAngles.x + 180);
 
+                        }
+                    }
                 }
             }
-
         }
     }
 
