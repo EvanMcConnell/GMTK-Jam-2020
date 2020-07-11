@@ -8,6 +8,16 @@ public class levelEnd : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
+            if (GameObject.Find("Coin") == null)
+            {
+                print("coin collected");
+
+            }
+            else
+            {
+                print("coin not collected");
+            }
+
             print("End");
         }
     }

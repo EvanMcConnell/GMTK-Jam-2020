@@ -25,10 +25,6 @@ public class enemyBehaviour : MonoBehaviour
         //force indirection of player on spawn
         rb.AddForce((player.transform.position - transform.position).normalized * thrust * Time.smoothDeltaTime);
 
-        allEnemies = GameObject.FindGameObjectsWithTag("ballEnemy");
-        EnemyAmount = allEnemies.Length;
-        print("enemyAmount: " + EnemyAmount);
-
         //start spawn
         InvokeRepeating("spawn", 2.0f, 2.0f);
     }
@@ -36,9 +32,6 @@ public class enemyBehaviour : MonoBehaviour
     void spawn()
     {
         rb.AddForce((player.transform.position - transform.position + new Vector3(0, 1, 0)).normalized * thrust * Time.smoothDeltaTime);
-        print("enemyAmount: " + EnemyAmount);
-        print("maxEnemies: " + maxEnemies);
-
         allEnemies = GameObject.FindGameObjectsWithTag("ballEnemy");
         EnemyAmount = allEnemies.Length;
 

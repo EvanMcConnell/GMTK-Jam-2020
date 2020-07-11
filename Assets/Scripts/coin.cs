@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class coin : MonoBehaviour
 {
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         transform.Rotate(50 * Time.deltaTime, 50 * Time.deltaTime, 50 * Time.deltaTime);
@@ -19,8 +14,6 @@ public class coin : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             Destroy(gameObject);
-
-            print("coin");
         }
     }
 }
