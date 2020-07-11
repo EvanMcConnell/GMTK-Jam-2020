@@ -11,11 +11,7 @@ public class levelEnd : MonoBehaviour
             if (GameObject.Find("Coin") == null)
             {
                 print("coin collected");
-
-            }
-            else
-            {
-                print("coin not collected");
+                GameManager.gameManager.addScore();
             }
 
             print("End");

@@ -10,11 +10,11 @@ public class GameManager : MonoBehaviour
     int bulletsLeft = 5, levelNumber, score;
     [SerializeField]
     Text bulletUI;
-    static GameManager gameManager;
+    public static GameManager gameManager;
 
     private void Awake()
     {
-        if(gameManager)
+        if (gameManager)
         {
             gameManager.bulletUI = bulletUI;
             if (levelNumber > 0)
