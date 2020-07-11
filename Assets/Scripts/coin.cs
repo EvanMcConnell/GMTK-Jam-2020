@@ -19,6 +19,8 @@ public class coin : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             Destroy(gameObject);
+
+            print("coin");
         }
     }
 }
