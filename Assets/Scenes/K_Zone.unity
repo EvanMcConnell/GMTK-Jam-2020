@@ -1067,8 +1067,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607670745}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22399998, y: -0.55999994, z: 0.7656054}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.22399998, y: -0.55999994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1555513517}
@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5949892266462470582, guid: b8017e579afb3e44eb31f15ee9826209, type: 3}
-  gunPivot: {fileID: 1555513516}
+  bulletPivot: {fileID: 1555513516}
   bulletSpeed: 1
 --- !u!212 &607670748
 SpriteRenderer:
@@ -1129,12 +1129,13 @@ SpriteRenderer:
   m_SortingLayerID: -474640627
   m_SortingLayer: 1
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: e6412efc08eb0eb46aea422d00e36ad7, type: 3}
+  m_Sprite: {fileID: -6628414004274166170, guid: e6412efc08eb0eb46aea422d00e36ad7,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.08}
+  m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1194,8 +1195,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358599641}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.89, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.88999987, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2050542732}
@@ -2210,7 +2211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555513516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.877, y: 0, z: 0}
+  m_LocalPosition: {x: 0.87699986, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 607670746}
@@ -2291,7 +2292,7 @@ PrefabInstance:
     - target: {fileID: 7810687590208098908, guid: 8be2aaa9e9170ff47bad75f5cc8cef9a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.7656054
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7810687590208098908, guid: 8be2aaa9e9170ff47bad75f5cc8cef9a,
         type: 3}
@@ -2443,8 +2444,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050542731}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31399965, y: -0.55999994, z: 0.7656054}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.31399965, y: -0.55999994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1358599642}
@@ -2464,7 +2465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5949892266462470582, guid: b8017e579afb3e44eb31f15ee9826209, type: 3}
-  gunPivot: {fileID: 1358599641}
+  bulletPivot: {fileID: 1358599641}
   bulletSpeed: 1
 --- !u!212 &2050542734
 SpriteRenderer:
@@ -2505,12 +2506,13 @@ SpriteRenderer:
   m_SortingLayerID: -474640627
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e6412efc08eb0eb46aea422d00e36ad7, type: 3}
+  m_Sprite: {fileID: -6628414004274166170, guid: e6412efc08eb0eb46aea422d00e36ad7,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.08}
+  m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -30,9 +30,12 @@ public class characterController : MonoBehaviour
 
     void takeInput()
     {
+        Vector3 mousePos = new Vector3(Camera.main.ScreenPointToRay(Input.mousePosition).origin.x, Camera.main.ScreenPointToRay(Input.mousePosition).origin.y, 0);
+
+
         horizontalInput = Input.GetAxisRaw("Horizontal");
-        if(horizontalInput < 0 && facingRight) { flip();  }
-        else if (horizontalInput > 0 && !facingRight) { flip(); }
+        if(mousePos.x < transform.position.x && facingRight) { flip();  }
+        else if (mousePos.x > transform.position.x && !facingRight) { flip(); }
     }
 
     void applyMovement()

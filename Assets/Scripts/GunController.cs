@@ -6,7 +6,7 @@ public class GunController : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject bullet, gunPivot;
+    GameObject bullet, bulletPivot;
     [SerializeField]
     float bulletSpeed=1;
     Vector3 mousePos;
@@ -14,6 +14,8 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(Vector3.Distance(mousePos, transform.position));
+
         rotateWeapon();
         checkForFire();
     }
@@ -39,17 +41,20 @@ public class GunController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject projectile = Instantiate(bullet, gunPivot.transform.position, Quaternion.identity);
-            projectile.GetComponent<Bullet>().setSpeed(bulletSpeed);
-            projectile.transform.LookAt(mousePos);
-            if (transform.position.x > mousePos.x)
+            if (Vector3.Distance(mousePos,transform.position) > 1)
             {
-                projectile.transform.rotation = Quaternion.Euler(0, 0, projectile.transform.rotation.eulerAngles.x+ 180);
-            }
-            else
-            {
-                projectile.transform.rotation = Quaternion.Euler(0, 180, projectile.transform.rotation.eulerAngles.x+ 180);
+                GameObject projectile = Instantiate(bullet, bulletPivot.transform.position, Quaternion.identity);
+                projectile.GetComponent<Bullet>().setSpeed(bulletSpeed);
+                projectile.transform.LookAt(mousePos);
+                if (transform.position.x > mousePos.x)
+                {
+                    projectile.transform.rotation = Quaternion.Euler(0, 0, projectile.transform.rotation.eulerAngles.x + 180);
+                }
+                else
+                {
+                    projectile.transform.rotation = Quaternion.Euler(0, 180, projectile.transform.rotation.eulerAngles.x + 180);
 
+                }
             }
 
         }
