@@ -8,7 +8,7 @@ public class characterController : MonoBehaviour
     float horizontalInput;
     bool walking;
     bool onGround;
-    bool facingRight = true;
+    public bool facingRight = true;
 
     public float jumpForce = 10f;
     public float fallGrav;
