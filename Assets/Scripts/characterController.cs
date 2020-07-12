@@ -22,10 +22,13 @@ public class characterController : MonoBehaviour
     public GameObject groundCheckCircle;
     public float groundCheckCircleRadius;
     public LayerMask groundLayer;
+    AudioSource jumpSound;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        jumpSound = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -36,7 +39,7 @@ public class characterController : MonoBehaviour
 
 
         horizontalInput = Input.GetAxisRaw("Horizontal");
-        if(mousePos.x < transform.position.x && facingRight) { flip();  }
+        if (mousePos.x < transform.position.x && facingRight) { flip(); }
         else if (mousePos.x > transform.position.x && !facingRight) { flip(); }
     }
 
@@ -59,10 +62,11 @@ public class characterController : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontalInput > 0 ? 5 : -5, rb.velocity.y);
         }
-        else if( Mathf.Abs(rb.velocity.x) > 0.25)
+        else if (Mathf.Abs(rb.velocity.x) > 0.25)
         {
             rb.AddForce(new Vector2(rb.velocity.x > 0 ? -5 : 5, 0));
-        } else if(Mathf.Abs(rb.velocity.x) < 0.26)
+        }
+        else if (Mathf.Abs(rb.velocity.x) < 0.26)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
@@ -70,12 +74,14 @@ public class characterController : MonoBehaviour
 
     void jump()
     {
-        if (onGround && Input.GetKeyDown(KeyCode.Space)) {
+        if (onGround && Input.GetKeyDown(KeyCode.Space))
+        {
             //rb.AddForce(new Vector2(0, jumpForce));
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             rb.gravityScale = 1;
-            print("we're gouin to the moon johhny!!");
-        }else if(!onGround && rb.velocity.y < 0)
+            jumpSound.Play();
+        }
+        else if (!onGround && rb.velocity.y < 0)
         {
             rb.gravityScale = fallGrav;
         }
