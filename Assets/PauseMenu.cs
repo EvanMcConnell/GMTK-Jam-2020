@@ -22,6 +22,7 @@ public class PauseMenu : MonoBehaviour
 
         if (paused)
         {
+            PlayerPrefs.SetInt("paused", 1);
             Time.timeScale = 0;
             if(pauseMenu.activeInHierarchy == false)
             {
@@ -30,6 +31,7 @@ public class PauseMenu : MonoBehaviour
         }
         else
         {
+            PlayerPrefs.SetInt("paused", 0);
             Time.timeScale = 1;
             if(pauseMenu.activeInHierarchy == true)
             {

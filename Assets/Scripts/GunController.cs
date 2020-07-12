@@ -43,7 +43,7 @@ public class GunController : MonoBehaviour
 
     void checkForFire()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && PlayerPrefs.GetInt("paused") == 0)
         {
             if (bullet != null)
             {
