@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ballEnemy
   - Bullet
+  - glassShard
   layers:
   - Default
   - TransparentFX
