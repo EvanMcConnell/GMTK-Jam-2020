@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7638013242645715316}
   - component: {fileID: 7638013242645715315}
   - component: {fileID: 7638013242645715314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Triangle
-  m_TagString: Untagged
+  m_TagString: glassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,9 +144,9 @@ GameObject:
   - component: {fileID: 7638013243402324148}
   - component: {fileID: 7638013243402324147}
   - component: {fileID: 7638013243402324146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Triangle (5)
-  m_TagString: Untagged
+  m_TagString: glassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -312,9 +312,9 @@ GameObject:
   - component: {fileID: 7638013243969253413}
   - component: {fileID: 7638013243969253412}
   - component: {fileID: 7638013243969253411}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Triangle (2)
-  m_TagString: Untagged
+  m_TagString: glassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -444,9 +444,9 @@ GameObject:
   - component: {fileID: 7638013244487010563}
   - component: {fileID: 7638013244487010562}
   - component: {fileID: 7638013244487010561}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Triangle (3)
-  m_TagString: Untagged
+  m_TagString: glassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -576,9 +576,9 @@ GameObject:
   - component: {fileID: 7638013244575562189}
   - component: {fileID: 7638013244575562188}
   - component: {fileID: 7638013244575562187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Triangle (1)
-  m_TagString: Untagged
+  m_TagString: glassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -708,9 +708,9 @@ GameObject:
   - component: {fileID: 7638013244636431888}
   - component: {fileID: 7638013244636431903}
   - component: {fileID: 7638013244636431902}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Triangle (4)
-  m_TagString: Untagged
+  m_TagString: glassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
