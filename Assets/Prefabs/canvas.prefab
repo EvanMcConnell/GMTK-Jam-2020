@@ -1153,9 +1153,9 @@ MonoBehaviour:
   bulletsLeft: 5
   levelsCompleted: 0
   score: 0
-  playing: 0
+  playing: 1
   bulletUI: {fileID: 127532613972118337}
-  debug: 0
+  reset: 0
 --- !u!1 &5464110927288323205
 GameObject:
   m_ObjectHideFlags: 0
