@@ -1662,7 +1662,7 @@ PrefabInstance:
     - target: {fileID: 1438118634119025293, guid: 7127eeb0b56ca1342a2425a9c48fd4b1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2250633774804888255, guid: 7127eeb0b56ca1342a2425a9c48fd4b1,
         type: 3}
@@ -1792,7 +1792,7 @@ PrefabInstance:
     - target: {fileID: 6084358485904258068, guid: 7127eeb0b56ca1342a2425a9c48fd4b1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7127eeb0b56ca1342a2425a9c48fd4b1, type: 3}
@@ -2069,6 +2069,7 @@ MonoBehaviour:
   bullet: {fileID: 0}
   bulletPivot: {fileID: 1348097627}
   bulletSpeed: 20
+  otherClip: {fileID: 0}
 --- !u!212 &1127064765
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9507,6 +9508,7 @@ MonoBehaviour:
   bullet: {fileID: 2856752257740206327, guid: 83662505f58c5c149b3aa3d7b34f53ea, type: 3}
   bulletPivot: {fileID: 268406046}
   bulletSpeed: 20
+  otherClip: {fileID: 0}
 --- !u!212 &1933910624
 SpriteRenderer:
   m_ObjectHideFlags: 0
