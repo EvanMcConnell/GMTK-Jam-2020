@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     int bulletsLeft = 5, levelsCompleted, score;
     [SerializeField]
-    bool playing;
+    bool playing = false;
     [SerializeField]
     Text bulletUI;
     public static GameManager gameManager;
@@ -48,7 +48,12 @@ public class GameManager : MonoBehaviour
 
     public void loadLevel(string level)
     {
-        playing = true;
+        if (!playing)
+        {
+            playing = true;
+            score = 0;
+            bulletsLeft = 5;
+        }
         SceneManager.LoadScene(level);
     }
 
