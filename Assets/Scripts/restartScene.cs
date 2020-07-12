@@ -17,11 +17,10 @@ public class restartScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         allEnemies = GameObject.FindGameObjectsWithTag("ballEnemy");
         EnemyAmount = allEnemies.Length;
 
-        if (EnemyAmount >= 512)
+        if (allEnemies.Length > 0 && EnemyAmount >= allEnemies[0].GetComponent<enemyBehaviour>().maxEnemies)
         {
             StartCoroutine(resetShow());
         }
