@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         else return false;
     }
 
+
     public void addScore()
     {
         score++;

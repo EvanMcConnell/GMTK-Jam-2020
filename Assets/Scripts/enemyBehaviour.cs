@@ -39,5 +39,9 @@ public class enemyBehaviour : MonoBehaviour
         {
             Instantiate(myPrefab, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
         }
+        else
+        {
+            FindObjectOfType<restartScene>().doTheThing();
+        }
     }
 }
