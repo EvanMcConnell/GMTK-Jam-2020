@@ -21,6 +21,7 @@ public class restartScene : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
+            GameManager.gameManager.setBulletsLeft(5);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

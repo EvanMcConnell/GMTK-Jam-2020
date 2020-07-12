@@ -67,6 +67,10 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+    public void setBulletsLeft(int b)
+    {
+        bulletsLeft = b;
+    }
 
     public void loadLevel(string level)
     {
