@@ -19,8 +19,8 @@ public class characterController : MonoBehaviour
     public GameObject groundCheckLeft;
     public GameObject groundCheckRight;
     public float groundCheckLength;
-    public GameObject wallCheck;
-    public float wallCheckLength;
+    public GameObject groundCheckCircle;
+    public float groundCheckCircleRadius;
     public LayerMask groundLayer;
 
     // Start is called before the first frame update
@@ -48,7 +48,8 @@ public class characterController : MonoBehaviour
 
     void checkCollisions()
     {
-        onGround = Physics2D.Raycast(groundCheckLeft.transform.position, Vector2.down, groundCheckLength, groundLayer) || Physics2D.Raycast(groundCheckRight.transform.position, Vector2.down, groundCheckLength, groundLayer);
+        //onGround = Physics2D.Raycast(groundCheckLeft.transform.position, Vector2.down, groundCheckLength, groundLayer) || Physics2D.Raycast(groundCheckRight.transform.position, Vector2.down, groundCheckLength, groundLayer);
+        onGround = Physics2D.OverlapCircle(groundCheckCircle.transform.position, groundCheckCircleRadius, groundLayer);
     }
 
 
@@ -100,5 +101,6 @@ public class characterController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(groundCheckLeft.transform.position, groundCheckLeft.transform.position + Vector3.down * groundCheckLength);
         Gizmos.DrawLine(groundCheckRight.transform.position, groundCheckRight.transform.position + Vector3.down * groundCheckLength);
+        Gizmos.DrawSphere(groundCheckCircle.transform.position, groundCheckCircleRadius);
     }
 }
