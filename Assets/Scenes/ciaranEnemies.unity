@@ -2255,6 +2255,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1975915173269598574, guid: 970ed7804e3b9814ba5462c5f7766e0b,
+        type: 3}
+      propertyPath: ShatterPreasure
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2537157936856782144, guid: 970ed7804e3b9814ba5462c5f7766e0b,
         type: 3}
       propertyPath: m_Name
@@ -9417,7 +9422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846221329}
   m_LocalRotation: {x: -0, y: -0, z: -0.00000046193594, w: 1}
-  m_LocalPosition: {x: 6.83, y: -4.13, z: 0}
+  m_LocalPosition: {x: 6.83, y: 1.87, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
