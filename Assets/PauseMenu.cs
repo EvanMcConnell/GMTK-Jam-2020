@@ -10,11 +10,10 @@ public class PauseMenu : MonoBehaviour
     public GameObject main;
     public GameObject quitMenu;
 
-    /*void Start()
+   void Start()
     {
-        pauseMenu = GameObject.Find("Pause Menu");
-        quitMenu = GameObject.Find("Quit Menu");
-    }*/
+        
+    }
 
 
     void Update()
@@ -64,5 +63,9 @@ public class PauseMenu : MonoBehaviour
         main.SetActive(true);
         quitMenu.SetActive(false);
         Time.timeScale = 0;
+    }
+    public void mainMenu()
+    {
+        GameManager.gameManager.loadMainMenu();
     }
 }

@@ -13,36 +13,54 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Text bulletUI;
     public static GameManager gameManager;
+    [SerializeField]
+    bool debug;
 
     private void Awake()
     {
         if (gameManager)
         {
             gameManager.bulletUI = bulletUI;
-            if (playing)
+            print("heyyyy it's me mr gameManager");
+            if (gameManager.playing)
             {
                 bulletUI.text = bulletsLeft.ToString();
             }
             else
             {
-
+                for (int i = 0; i < levelsCompleted + 1; i++)
+                {
+                    if (i < 6)
+                    {
+                        GameObject.Find("Level Locker").GetComponent<levelStorage>().levels[i].SetActive(true);
+                    }
+                }
             }
             saveGame();
             Destroy(this);
         }
         else
         {
+            print("Where the fuck am I!!????");
+            //if (!debug) { gameManager = this; loadGame(); }
             if (playing)
             {
                 bulletUI.text = bulletsLeft.ToString();
             }
             else
             {
-
+                for (int i = 0; i < levelsCompleted + 1; i++)
+                {
+                    if (i < 6)
+                    {
+                        GameObject.Find("Level Locker").GetComponent<levelStorage>().levels[i].SetActive(true);
+                    }
+                }
             }
             gameManager = this;
             loadGame();
-            DontDestroyOnLoad(this);
+            transform.parent = null;
+            DontDestroyOnLoad(gameObject);
         }
     }
 

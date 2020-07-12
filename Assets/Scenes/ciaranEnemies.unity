@@ -1659,6 +1659,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1438118634119025293, guid: 7127eeb0b56ca1342a2425a9c48fd4b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2250633774804888255, guid: 7127eeb0b56ca1342a2425a9c48fd4b1,
+        type: 3}
+      propertyPath: playing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2959638419173160662, guid: 7127eeb0b56ca1342a2425a9c48fd4b1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1777,6 +1787,11 @@ PrefabInstance:
     - target: {fileID: 3808508508681105270, guid: 7127eeb0b56ca1342a2425a9c48fd4b1,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084358485904258068, guid: 7127eeb0b56ca1342a2425a9c48fd4b1,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
