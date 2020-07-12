@@ -9,7 +9,7 @@ public class windowsShatter : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if ((col.gameObject.tag == "Player" || col.gameObject.tag == "ballEnemy" || col.gameObject.tag == "Bullet") && col.relativeVelocity.magnitude > ShatterPreasure)
+        if ((col.gameObject.tag == "Player" || col.gameObject.tag == "ballEnemy" || col.gameObject.tag == "Bullet" || col.gameObject.tag == "glassShard") && col.relativeVelocity.magnitude > ShatterPreasure)
         {
             Instantiate(BrokenWindow, transform.position, transform.rotation);
             Destroy(gameObject);
