@@ -8,13 +8,17 @@ public class GunController : MonoBehaviour
     [SerializeField]
     GameObject bullet, bulletPivot;
     [SerializeField]
-    float bulletSpeed=1;
+    float bulletSpeed = 1;
     Vector3 mousePos;
+    public AudioClip otherClip;
+    AudioSource audio;
 
     // Update is called once per frame
 
     private void Start()
     {
+        audio = gameObject.AddComponent<AudioSource>();
+        audio.clip = otherClip;
         gameManager = FindObjectOfType<GameManager>();
     }
 
@@ -31,11 +35,11 @@ public class GunController : MonoBehaviour
         transform.LookAt(mousePos);
         if (transform.position.x > mousePos.x)
         {
-            transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.x+ 180);
+            transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.x + 180);
         }
         else
         {
-            transform.rotation = Quaternion.Euler(0, 180, transform.rotation.eulerAngles.x+180);
+            transform.rotation = Quaternion.Euler(0, 180, transform.rotation.eulerAngles.x + 180);
 
         }
     }
@@ -52,6 +56,7 @@ public class GunController : MonoBehaviour
                     if (gameManager.canShoot())
                     {
                         GameObject projectile = Instantiate(bullet, bulletPivot.transform.position, Quaternion.identity);
+                        audio.Play();
                         if (projectile.tag == "Bullet")
                         {
                             projectile.GetComponent<Bullet>().setSpeed(bulletSpeed);
