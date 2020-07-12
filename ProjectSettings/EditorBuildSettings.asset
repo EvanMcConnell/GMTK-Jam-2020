@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/K_Zone.unity
     guid: 146be791dec846b4b8d445587f2398e7
+  - enabled: 1
+    path: Assets/Scenes/ciaranEnemies.unity
+    guid: dcd9401c8c448a84e9baa99dd19dbed3
+  - enabled: 1
+    path: Assets/Scenes/thin_glass.unity
+    guid: ee1c0c69c5a1ea94a9c10f5006e24b92
+  - enabled: 1
+    path: Assets/Scenes/ballPit.unity
+    guid: 5035a40155a9bb6468627664695799eb
+  - enabled: 1
+    path: Assets/Scenes/raising.unity
+    guid: 839af9589f70bbc479efb59e01045e46
+  - enabled: 1
+    path: Assets/Scenes/sidySidy.unity
+    guid: 2202274df2b23bd498e4b5293853d60f
   m_configObjects: {}
