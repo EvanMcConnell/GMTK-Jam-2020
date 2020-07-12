@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class restartScene : MonoBehaviour
 {
     public GameObject Resety;
@@ -17,19 +17,19 @@ public class restartScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        allEnemies = GameObject.FindGameObjectsWithTag("ballEnemy");
-        EnemyAmount = allEnemies.Length;
-
-        if (allEnemies.Length > 0 && EnemyAmount >= allEnemies[0].GetComponent<enemyBehaviour>().maxEnemies)
-        {
-            StartCoroutine(resetShow());
-        }
+        
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+
+    public void doTheThing()
+    {
+        StartCoroutine(resetShow());
+    }
+
 
     IEnumerator resetShow()
     {
