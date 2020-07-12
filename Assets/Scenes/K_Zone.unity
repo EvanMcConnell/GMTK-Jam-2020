@@ -5285,6 +5285,11 @@ PrefabInstance:
       propertyPath: transitionImage
       value: 
       objectReference: {fileID: 842211472}
+    - target: {fileID: 6674357955547405460, guid: 0393cf64b10845b4d8fbbd6b83a0f36d,
+        type: 3}
+      propertyPath: lc
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6674357955547405461, guid: 0393cf64b10845b4d8fbbd6b83a0f36d,
         type: 3}
       propertyPath: m_LocalPosition.x
