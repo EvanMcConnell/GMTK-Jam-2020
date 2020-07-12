@@ -7,7 +7,7 @@ public class transitionManager : MonoBehaviour
 {
     public enum state { fadeIn, fadeOut, idle, load};
     public state transitionState;
-    Animator anim;
+    public Animator anim;
     public string nextLevel;
 
     void Start()
@@ -43,7 +43,6 @@ public class transitionManager : MonoBehaviour
                 break;
 
             case state.load:
-                //SceneManager.LoadScene(nextLevel);
                 GameManager.gameManager.loadLevel(nextLevel);
                 break;
 

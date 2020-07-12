@@ -20,7 +20,7 @@ public class buttonController : MonoBehaviour
 
     public void loadLevel()
     {
-        transitionImage.SetActive(true);
+        //transitionImage.SetActive(true);
         transitionImage.GetComponent<transitionManager>().setNextLevel(nextLevel);
         transitionImage.GetComponent<transitionManager>().setState(newTransitionState);
     }
