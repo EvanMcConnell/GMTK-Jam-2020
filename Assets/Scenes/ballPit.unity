@@ -429,6 +429,11 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.4
       objectReference: {fileID: 0}
+    - target: {fileID: 6674357955547405460, guid: 0393cf64b10845b4d8fbbd6b83a0f36d,
+        type: 3}
+      propertyPath: transitionImage
+      value: 
+      objectReference: {fileID: 1327459425}
     - target: {fileID: 6674357955547405461, guid: 0393cf64b10845b4d8fbbd6b83a0f36d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7375,6 +7380,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1975915173269598574, guid: 970ed7804e3b9814ba5462c5f7766e0b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 970ed7804e3b9814ba5462c5f7766e0b, type: 3}
+--- !u!1 &1327459425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6363038526669935098, guid: 7127eeb0b56ca1342a2425a9c48fd4b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1676093117}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1348658684
 GameObject:
   m_ObjectHideFlags: 0
@@ -7760,6 +7771,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7109112911148900643, guid: 8be2aaa9e9170ff47bad75f5cc8cef9a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7810687590208098904, guid: 8be2aaa9e9170ff47bad75f5cc8cef9a,
         type: 3}
       propertyPath: m_Name
