@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6d9eb447a8eb24da3f371649e12935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionImage: {fileID: 0}
+  nextLevel: 
 --- !u!61 &6674357955547405459
 BoxCollider2D:
   m_ObjectHideFlags: 0
