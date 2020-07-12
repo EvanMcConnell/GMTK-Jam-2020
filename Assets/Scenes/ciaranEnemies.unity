@@ -1817,7 +1817,12 @@ PrefabInstance:
     - target: {fileID: 728679124086575425, guid: 83662505f58c5c149b3aa3d7b34f53ea,
         type: 3}
       propertyPath: maxEnemies
-      value: 512
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 728679124086575425, guid: 83662505f58c5c149b3aa3d7b34f53ea,
+        type: 3}
+      propertyPath: thrust
+      value: 29999
       objectReference: {fileID: 0}
     - target: {fileID: 2856752257740206312, guid: 83662505f58c5c149b3aa3d7b34f53ea,
         type: 3}

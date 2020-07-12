@@ -136,4 +136,4 @@ MonoBehaviour:
   myPrefab: {fileID: 2856752257740206327}
   player: {fileID: 0}
   maxEnemies: 512
-  thrust: 299999
+  thrust: 59999
