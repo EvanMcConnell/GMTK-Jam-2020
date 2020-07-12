@@ -3568,7 +3568,7 @@ PrefabInstance:
     - target: {fileID: 2959638419173160662, guid: 7127eeb0b56ca1342a2425a9c48fd4b1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.0002441
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 2959638419173160662, guid: 7127eeb0b56ca1342a2425a9c48fd4b1,
         type: 3}
@@ -6185,6 +6185,11 @@ PrefabInstance:
       propertyPath: nextLevel
       value: Main Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 6674357955547405460, guid: 0393cf64b10845b4d8fbbd6b83a0f36d,
+        type: 3}
+      propertyPath: lc
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6674357955547405461, guid: 0393cf64b10845b4d8fbbd6b83a0f36d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6295,6 +6300,7 @@ MonoBehaviour:
   bullet: {fileID: 2856752257740206327, guid: 83662505f58c5c149b3aa3d7b34f53ea, type: 3}
   bulletPivot: {fileID: 1791819705}
   bulletSpeed: 5
+  otherClip: {fileID: 0}
 --- !u!212 &916199115
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26649,6 +26655,7 @@ MonoBehaviour:
   bullet: {fileID: 0}
   bulletPivot: {fileID: 1320857530}
   bulletSpeed: 1
+  otherClip: {fileID: 0}
 --- !u!212 &1765033826
 SpriteRenderer:
   m_ObjectHideFlags: 0

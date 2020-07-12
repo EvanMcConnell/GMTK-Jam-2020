@@ -14,10 +14,15 @@ public class GameManager : MonoBehaviour
     Text bulletUI;
     public static GameManager gameManager;
     [SerializeField]
-    bool debug;
+    bool reset;
 
     private void Awake()
     {
+        if (reset)
+        {
+            PlayerPrefs.SetInt("level_number", 0);
+            saveGame();
+        }
         if (gameManager)
         {
             gameManager.bulletUI = bulletUI;
@@ -28,7 +33,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                for (int i = 0; i < levelsCompleted + 1; i++)
+                for (int i = 0; i < gameManager.levelsCompleted + 1; i++)
                 {
                     if (i < 6)
                     {
@@ -36,20 +41,21 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
-            saveGame();
-            Destroy(this);
+            Destroy(gameObject);
         }
         else
         {
             print("Where the fuck am I!!????");
             //if (!debug) { gameManager = this; loadGame(); }
+            gameManager = this;
+            loadGame();
             if (playing)
             {
                 bulletUI.text = bulletsLeft.ToString();
             }
             else
             {
-                for (int i = 0; i < levelsCompleted + 1; i++)
+                for (int i = 0; i < gameManager.levelsCompleted + 1; i++)
                 {
                     if (i < 6)
                     {
@@ -57,8 +63,6 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
-            gameManager = this;
-            loadGame();
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
         }
@@ -70,14 +74,16 @@ public class GameManager : MonoBehaviour
         {
             playing = true;
             score = 0;
-            bulletsLeft = 5;
+            
         }
+        bulletsLeft = 5;
         SceneManager.LoadScene(level);
     }
 
     public void loadMainMenu()
     {
         playing = false;
+        loadGame();
         SceneManager.LoadScene("Main Menu");
     }
 
@@ -107,7 +113,14 @@ public class GameManager : MonoBehaviour
 
     public void saveGame()
     {
+        print("saving: " + levelsCompleted);
         PlayerPrefs.SetInt("level_number", levelsCompleted);
+    }
+
+    public void increaseLevel()
+    {
+        levelsCompleted = levelEnd.levelCount;
+        saveGame();
     }
 
     public void loadGame()

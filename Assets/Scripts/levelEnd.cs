@@ -10,9 +10,14 @@ public class levelEnd : MonoBehaviour
 
     [SerializeField]
     string nextLevel;
+
+    public int lc;
+    public static int levelCount;
+
     void Start()
     {
         endSound = GetComponent<AudioSource>();
+        levelCount = lc;
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -23,6 +28,13 @@ public class levelEnd : MonoBehaviour
             {
                 print("coin collected");
                 GameManager.gameManager.addScore();
+            }
+
+            print("pref: " + PlayerPrefs.GetInt("level_number"));
+
+            if (levelCount > PlayerPrefs.GetInt("level_number"))
+            {
+                GameManager.gameManager.increaseLevel();
             }
 
             transitionImage.GetComponent<transitionManager>().setNextLevel(nextLevel);
