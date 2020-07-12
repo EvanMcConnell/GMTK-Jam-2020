@@ -5,7 +5,7 @@ using UnityEngine;
 public class windowsShatter : MonoBehaviour
 {
     public GameObject BrokenWindow;
-    public int ShatterPreasure = 2;
+    public float ShatterPreasure = 2f;
 
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -17,3 +17,4 @@ public class windowsShatter : MonoBehaviour
     }
 }
 
+a
