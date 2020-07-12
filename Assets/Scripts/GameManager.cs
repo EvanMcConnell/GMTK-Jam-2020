@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
 
     public void loadMainMenu()
     {
-        playing = false;
+        gameManager.playing = false;
         loadGame();
         SceneManager.LoadScene("Main Menu");
     }
