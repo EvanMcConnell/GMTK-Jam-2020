@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    int bulletsLeft = 5, levelNumber, score;
+    int bulletsLeft = 5, levelsCompleted, score;
+    [SerializeField]
+    bool playing;
     [SerializeField]
     Text bulletUI;
     public static GameManager gameManager;
@@ -17,23 +19,45 @@ public class GameManager : MonoBehaviour
         if (gameManager)
         {
             gameManager.bulletUI = bulletUI;
-            if (levelNumber > 0)
+            if (playing)
             {
                 bulletUI.text = bulletsLeft.ToString();
             }
+            else
+            {
+
+            }
+            saveGame();
             Destroy(this);
         }
         else
         {
-            score = 0;
-            if (levelNumber > 0)
+            if (playing)
             {
                 bulletUI.text = bulletsLeft.ToString();
             }
+            else
+            {
+
+            }
             gameManager = this;
+            loadGame();
             DontDestroyOnLoad(this);
         }
     }
+
+    public void loadLevel(string level)
+    {
+        playing = true;
+        SceneManager.LoadScene(level);
+    }
+
+    public void loadMainMenu()
+    {
+        playing = false;
+        SceneManager.LoadScene("Main Menu");
+    }
+
 
 
     public bool canShoot()
@@ -56,6 +80,17 @@ public class GameManager : MonoBehaviour
     public void addScore()
     {
         score++;
+    }
+
+    public void saveGame()
+    {
+        PlayerPrefs.SetInt("level_number", levelsCompleted);
+    }
+
+    public void loadGame()
+    {
+        gameManager.score = 0;
+        gameManager.levelsCompleted = PlayerPrefs.GetInt("level_number");
     }
 
 }
