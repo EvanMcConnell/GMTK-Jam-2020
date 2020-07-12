@@ -17,4 +17,3 @@ public class windowsShatter : MonoBehaviour
     }
 }
 
-a
