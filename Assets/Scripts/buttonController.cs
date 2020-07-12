@@ -12,6 +12,11 @@ public class buttonController : MonoBehaviour
     public string nextLevel;
     public GameObject transitionImage;
 
+    void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     public void transitionMenus()
     {
         menuA.setState(menuANewState);
