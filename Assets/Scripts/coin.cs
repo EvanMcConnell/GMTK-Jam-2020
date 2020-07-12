@@ -5,11 +5,7 @@ using UnityEngine;
 public class coin : MonoBehaviour
 {
     AudioSource chompSound;
-
-    private void Start()
-    {
-        chompSound = GetComponent<AudioSource>();
-    }
+    public GameObject soundObject;
     void Update()
     {
         transform.Rotate(50 * Time.deltaTime, 50 * Time.deltaTime, 50 * Time.deltaTime);
@@ -19,7 +15,8 @@ public class coin : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            chompSound.Play();
+            Instantiate(soundObject, new Vector3(0, 0, 0), Quaternion.identity);
+
             Destroy(gameObject);
         }
     }
