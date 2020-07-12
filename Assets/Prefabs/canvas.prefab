@@ -758,6 +758,7 @@ GameObject:
   - component: {fileID: 3808508508681105268}
   - component: {fileID: 3808508508681105267}
   - component: {fileID: 3808508508681105266}
+  - component: {fileID: -4846427998021745813}
   m_Layer: 5
   m_Name: canvas
   m_TagString: Untagged
@@ -863,6 +864,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resety: {fileID: 3808508506954338258}
+--- !u!114 &-4846427998021745813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3808508508681105265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb832df01c8909d498858fe1b6e3a404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 4087967248928190670, guid: faa9f4a73a8f4f844b804cd942518693, type: 3}
 --- !u!1 &4807594977967509483
 GameObject:
   m_ObjectHideFlags: 0
